@@ -2,7 +2,11 @@
 
 body {
     font-family: "Poppins";
-    max-width: fit-content;
+    overflow-x: hidden;
+}
+
+html {
+    max-height: fit-content;
 }
 
 h1 {
@@ -36,7 +40,6 @@ main {
     height: fit-content;
     background-color: #890ff8;
     border-radius: 12px;
-    padding: 10px;
     margin-top: 1em;
 }
 

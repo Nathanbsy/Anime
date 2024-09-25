@@ -1,25 +1,18 @@
-let pagina = 1;
-
-let url = `https://myanimelist.p.rapidapi.com/anime/top/all?p=${pagina}`;
-const opcoes = {
-    method: 'GET',
-    headers: {
-        'x-rapidapi-key': '28a45349eemsh32d4f46539be530p187e76jsnf22cc51df762',
-        'x-rapidapi-host': 'myanimelist.p.rapidapi.com'
-    }
-};
+const url = `https://api.jikan.moe/v4/top/anime`;
 
 const cards = document.querySelector("main");
 
 async function mostrarCatalogo() {
     try {
-        const req = await fetch(url, opcoes);
+        const req = await fetch(url);
         const res = await req.json();
-        res.forEach((anime) => {
+        const animes = res.data;
+        console.log(animes)
+        animes.forEach((anime) => {
             cards.innerHTML += `
             <div class="card">
                 <div class="card-img">
-                    <img src="${anime.picture_url}"/>
+                    <img src="${anime.images.jpg.image_url}"/>
                 </div>
                 <div class="card-textos">
                     <h3>${anime.title}</h3>
@@ -28,7 +21,6 @@ async function mostrarCatalogo() {
             </div>
             `;
         });
-        console.log(res);
     } catch (error) {
         console.error(error);
     }

@@ -2,14 +2,50 @@
 
 body {
     font-family: "Poppins";
-    overflow-x: hidden;
 }
 
-html {
-    max-height: fit-content;
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .5);
 }
 
-h1 {
+dialog {
+    text-align: center;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    width: 80%;
+    margin: 2.25em 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 1em;
+}
+
+.volta {
+    right: 10%;
+    top: 95%;
+    position: fixed;
+}
+
+.mostrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 1em;
+}
+
+.btn_mais {
+    border-radius: 24px;
+    width: 100px;
+    height: 30px;
+    background-color: #2a2a2b;
+    color: white;
+}
+
+/* h1 {
     font-weight: 700;
     font-size: 1.75em;
 }
@@ -22,7 +58,7 @@ h2 {
 h5, h3 {
     font-weight: 700;
     font-size: 1.25em;
-}
+} */
 
 main {
     display: flex;
@@ -40,13 +76,14 @@ main {
     height: fit-content;
     background-color: #890ff8;
     border-radius: 12px;
+    padding: 10px;
     margin-top: 1em;
 }
 
 .card-textos {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 8px;
 }
 
 img {

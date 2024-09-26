@@ -8,15 +8,32 @@
     <title>Animes</title>
 </head>
 <body>
+    <a class="volta" href="#">H</a>
     <header>
         <nav>
+            <input type="search" id="pesquisa">
+            <button onclick="filtrarPesquisa()">Pesquisar</button>
+            <div id="criarModal">
+
+            </div>
+            <dialog>
+                <button id="btnFechar">X</button>
+                <h2>Pesquisa: </h2>
+            </dialog>
         </nav>
     </header>
 
     <main>
         <h1>Bem vindo(a)!</h1>
         <h2>Animes mais populares</h2>
+        <div id="secPrincipal">
+
+        </div>
     </main>
+
+    <div class="mostrar">
+        <button class=btn_mais onclick="mostrarMais()">Mostrar Mais</button>
+    </div>
 
     <footer>
 

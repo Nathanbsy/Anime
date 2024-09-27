@@ -8,18 +8,22 @@
     <title>Animes</title>
 </head>
 <body>
-    <a class="volta" href="#">H</a>
+    <a class="volta" href="#"><img src="./src/assets/imagem-icone-seta.png" alt="Seta" class="img_seta"></a>
     <header>
         <nav>
-            <input type="search" id="pesquisa">
-            <button onclick="filtrarPesquisa()">Pesquisar</button>
+            <input type="search" id="pesquisa" class="src">
+            <button class="btn_src" onclick="filtrarPesquisa()"><img src="./src/assets/imagem-icone-pesquisa.png" alt="Lupa" class="img_src"></button>
             <div id="criarModal">
 
             </div>
-            <dialog>
-                <button id="btnFechar">X</button>
-                <h2>Pesquisa: </h2>
-            </dialog>
+            <div class="modal">
+                <dialog>
+                    <div class="pesq">
+                        <button id="btnFechar">X</button>
+                        <h2>Pesquisa: </h2>
+                    </div>
+                </dialog>
+            </div>
         </nav>
     </header>
 

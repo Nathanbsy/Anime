@@ -9,12 +9,48 @@ dialog::backdrop {
 }
 
 dialog {
-    text-align: center;
     border: none;
     border-radius: .5rem;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
     width: 80%;
     margin: 2.25em 2em;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img_src {
+    width: 28px;
+}
+
+.btn_src {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 12px 12px 0;
+    border: 1px solid rgb(49, 49, 49);
+    background-color: #afafaf;
+}
+
+.src {
+    border-radius: 12px 0 0 12px;
+    border: 1px solid rgb(49, 49, 49);
+    height: 30px;
+    font-size: 18px;
+}
+
+.img_seta {
+    width: 40px;
 }
 
 nav {
@@ -25,8 +61,8 @@ nav {
 }
 
 .volta {
-    right: 10%;
-    top: 95%;
+    right: 5%;
+    top: 92%;
     position: fixed;
 }
 
@@ -45,21 +81,6 @@ nav {
     color: white;
 }
 
-/* h1 {
-    font-weight: 700;
-    font-size: 1.75em;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: 1.25em;
-}
-
-h5, h3 {
-    font-weight: 700;
-    font-size: 1.25em;
-} */
-
 main {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +93,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 210px;
     height: fit-content;
     background-color: #890ff8;
     border-radius: 12px;

@@ -16,6 +16,10 @@ const modal = document.querySelector("dialog");
 
 const botaoFechar = document.getElementById("btnFechar");
 
+const divAnimes = document.querySelector(".pesq");
+
+
+
 botaoFechar.onclick = async function () {
     const div = document.getElementById("cardsAnimes");
     if (div) {
@@ -25,13 +29,13 @@ botaoFechar.onclick = async function () {
 }
 
 async function filtrarPesquisa() {
-    const div = document.createElement('div');
-    div.id = 'cardsAnimes';
-    modal.appendChild(div);
+    const div = document.createElement("div");
+    div.id = "cardsAnimes";
+    divAnimes.appendChild(div);
     modal.showModal();
     if (barraPesquisa != "") {
         valorFiltro = barraPesquisa.value.toLowerCase();
-        urlPesquisa = `https://api.jikan.moe/v4/anime?q=${valorFiltro}`;
+        urlPesquisa = `https://api.jikan.moe/v4/anime?q=${valorFiltro}&limit=5`;
         const req = await fetch(urlPesquisa);
         const res = await req.json()
         const animes = res.data;
